@@ -90,11 +90,17 @@ module Transcriber
   end
 end
 
-#include Transcriber
-#
-#glyph = nil
-#morphemes('kopdakab').each{|morpheme|
-#  glyph = make_char_glyph(morpheme, glyph)
-#}
-#glyph.write 'examples/kopdakab.png'
+include Transcriber
+
+glyph = nil
+morphemes('duagudo').each{|morpheme|
+  glyph = make_char_glyph(morpheme, glyph)
+}
+glyph.write 'examples/duagudo.png'
+
+glyph = nil
+morphemes('duopeuk').each{|morpheme|
+  glyph = make_char_glyph(morpheme, glyph)
+}
+glyph.write 'examples/duopeuk.png'
 

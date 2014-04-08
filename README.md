@@ -37,3 +37,11 @@ kopdakab
 libpaplobut
 
 ![libpaplobut](../master/examples/libpaplobut.png?raw=true)
+
+duagudo
+
+![duagudo](../master/examples/duagudo.png?raw=true)
+
+duopeuk
+
+![duopeuk](../master/examples/duopeuk.png?raw=true)
