@@ -2,6 +2,9 @@
 # encoding: UTF-8
 
 require 'mini_magick'
+require 'tmpdir'
+require 'securerandom'
+
 include MiniMagick
 
 GLYPH_DIR = 'glyphs'
@@ -34,11 +37,13 @@ def morphemes str
 end
 
 # Creates a glyph for the given morpheme.
+# If a canvas is specified, increases the width of the canvas as needed
+# and paints the image onto it
 # Returns an instance of Image
-def make_char_glyph morpheme
-  consonant = morpheme[0]
+def make_char_glyph morpheme, canvas = nil
+  consonant = CONSONANT_MAP[morpheme[0]]
   vowels = morpheme[1].split('')
-  consonant2 = morpheme[2]
+  consonant2 = CONSONANT_MAP[morpheme[2]]
 
   dir = GLYPH_DIR + File::SEPARATOR
 
@@ -66,6 +71,15 @@ def make_char_glyph morpheme
     c2img.flip
     image = image.composite(c2img)
   end
+
+  if canvas != nil
+    path = Dir.tmpdir + File::SEPARATOR + SecureRandom.hex + 'glyph.png'
+    # TODO: Could not easily use +append function; will need to research more
+    `convert #{canvas.path} #{image.path} +append #{path}`
+    image = Image.open(path)
+  end
+  return image
 end
 
-#make_char_glyph(['g','ae','b']).write "tmp.png"
+#glyph = make_char_glyph(['g','ae','b'])
+#make_char_glyph(['t','iu','t','i'], glyph).write 'tmp.png'
