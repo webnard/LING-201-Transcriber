@@ -42,27 +42,30 @@ def make_char_glyph morpheme
 
   dir = GLYPH_DIR + File::SEPARATOR
 
-  cimg = Image.open(dir + consonant + '.png', 'png')
+  image = Image.open(dir + consonant + '.png', 'png')
   v1img = Image.open(dir + vowels[0] + '.png', 'png')
   v2img = nil
   c2img = nil
   
-  image = cimg.composite(v1img)
-  return image
+  image = image.composite(v1img)
 
   if(vowels[1] != nil)
-    v2img = dir + vowels[1] + '.png'
+    v2img = Image.open(dir + vowels[1] + '.png')
     # cut me in two
-    #w = v2img.x_size
-    #h = v2img.y_size
-    #v2img = v2img.extract_area(w/2, h/2, w, h)
+    w = v2img['width']
+    h = v2img['height']
+    v2img.crop("#{w}x#{h}+#{w/2}+0")
 
-    image.read(v2img)
+    image = image.composite(v2img) do |c|
+      c.gravity 'NorthEast'
+    end
   end
   
   if consonant2 != nil
-    #c2img = Image.new(dir + consonant2 + '.png').flipver()
-    image.read c2img
+    c2img = Image.open(dir + consonant2 + '.png')
+    c2img.flip
+    image = image.composite(c2img)
   end
-  image.mosaic
 end
+
+#make_char_glyph(['g','ae','b']).write "tmp.png"
