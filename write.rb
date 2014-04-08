@@ -10,7 +10,7 @@ include MiniMagick
 module Transcriber
   GLYPH_DIR = 'glyphs'
 
-  # Maps a morpheme to its appropriate glyph
+  # Maps a phoneme to its appropriate glyph
   CONSONANT_MAP = {
     'p'=>'m',
     'b'=>'b',
