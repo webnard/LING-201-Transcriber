@@ -23,13 +23,17 @@ glyph.write 'tmp2.png'
 EXAMPLES
 -------------------
 bibkuppaɣgog
-![bibkuppaɣgog](../blob/master/examples/bibkuppaɣgog.png?raw=true)
+
+![bibkuppaɣgog](../master/examples/bibkuppaɣgog.png?raw=true)
 
 ʈioɖugtak
-![ʈioɖugtak](../blob/master/examples/ʈioɖugtak.png?raw=true)
+
+![ʈioɖugtak](../master/examples/ʈioɖugtak.png?raw=true)
 
 kopdakab
-![kopdakab](../blob/master/examples/kopdakab.png?raw=true)
+
+![kopdakab](../master/examples/kopdakab.png?raw=true)
 
 libpaplobut
-![libpaplobut](../blob/master/examples/libpaplobut.png?raw=true)
+
+![libpaplobut](../master/examples/libpaplobut.png?raw=true)
