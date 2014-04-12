@@ -7,25 +7,43 @@ require 'securerandom'
 
 input, output = ARGV
 
-chapter = nil
+chapter = '0-9'
 text = ''
 
-CSV.foreach(File.path(input)) do |data|
+MAP = {
+    'ɖ'=>'\:d',
+    'ɣ'=>'G',
+    'ʈ'=>'\:t',
+    'ɭ'=>'\:l'
+}
+
+text = File.read(input).gsub(/\\"/,'""')
+CSV.parse(text) do |data|
   word, transcription, speech = data
 
   if(word == nil || transcription == nil || speech == nil)
-    break
+    next
   end
 
   word.downcase!
   speech.downcase!
 
-  if chapter != word[0]
+  if chapter != word[0] && word[0] >= 'a'
     chapter = word[0]
     text += "\\chapter*{#{chapter.upcase}}\n"
   end
 
-  text += "\\dict{#{word}}{#{speech}}{#{transcription}}\n"
+  ipa = ''
+
+  transcription.each_char do|i|
+    if MAP[i] != nil
+      ipa += MAP[i]
+    else
+      ipa += i
+    end
+  end
+
+  text += "\\dict{#{word}}{#{speech}}{#{ipa}}\n"
 end
 
 texfile = Dir.tmpdir + File::SEPARATOR + SecureRandom.hex + '.tex'

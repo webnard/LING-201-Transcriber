@@ -1,3 +1,5 @@
+"For complex words, try to keep the order of JUDGMENT (beneficial/harmful/valid/invalid/etc) + OBJECT. See the Suggested Grammar Rules for more information",,,
+DEFINITION,TRANSCRIPTION,PART OF SPEECH,ADDED BY
 1,goɣ,adj,natalie
 2,koɣ,adj,natalie
 3,boɣ,adj,natalie
@@ -17,8 +19,8 @@ ANGRY,put,adj,Ian
 animal,Pambap,noun,Merri
 animals ,kolidiod,noun,Liz
 announce,dotepiko,verb,liz
-apple juice,ɣapulobut,noun,Izzy
 apple (like),pu,adj/noun,Izzy
+apple juice,ɣapulobut,noun,Izzy
 apply,Beu,verb,merri
 assert,dau,verb,Merri
 assignment,petokoli,noun,liz
@@ -30,13 +32,13 @@ banana,lobuta,noun,Izzy
 basic,da,adj,Izzy
 basket,popikat,noun,Ian
 bathe,tonkatdo,verb,liz
+BE,du,verb,Merri
+be constant,toɣdagdu,verb,Chris
 bean,lol,noun,Izzy
 BEAUTY,gugdebgal,noun,Ian
 because,duoɖeub,conj,Chris
 become,Dua,verb,merri
-be constant,toɣdagdu,verb,Chris
 bed,kogu,noun,liz
-BE,du,verb,Merri
 Bee,bi,noun,Izzy
 beef,pokab,noun,Izzy
 belong,geu,verb,Ian
@@ -46,8 +48,8 @@ best,bibep,adj,Chris
 better,biubib,adj,Chris
 Bilimbi,lobutɖiɣ,noun,Izzy
 bite,potabala,verb,liz
-Black beans,lol,noun,Izzy
 BLACK,paʈ,adj,Ian
+Black beans,lol,noun,Izzy
 blanket,balaket,noun,liz
 BLUE,tut,adj,Ian
 BOAT,bolob,noun,Merri
@@ -67,11 +69,13 @@ Canistel,pout,noun,Izzy
 Cape Gooseberry,koalgub,noun,Izzy
 carry,popi,verb,liz
 CARVE,ka,verb,"Merri
+"
 cashew,dabut,noun,Izzy
 catch ,paildiba,verb,Liz
 CAUSALITY,tukot,noun,Ian
 cause,Due,verb,merri
 cause,Tea,"Verb
+",Merri
 Cemedak,lobut,noun,Izzy
 Ceylon,pilobut,noun,Izzy
 chair,capakit,noun,liz
@@ -102,11 +106,11 @@ Custard apple,pulobutid,noun,Izzy
 Damson,lobutpop,noun,Izzy
 dark,duaɖaebbiɖ,adj,Chris
 darkness,duaɖaeb,noun,Chris
+day,dot,noun,liz
 DAY 2,kok,time,natalie
 DAY 3,bok,time,natalie
 DAY 4,dok,time,natalie
 DAY 5,pok,time,natalie
-day,dot,noun,liz
 Deer,do,noun,Izzy
 dependent,ʈiuk,adj,
 DESPONDENT,bablibbib,adj,Ian
@@ -115,16 +119,16 @@ different,duatok,adj,Chris
 dig,gubpi,verb,Ian
 discover,Kout,verb,merri
 divide,duagudo,verb,Chris
+do,keɣbe,verb,Chris
 does,dogeb,adverb,Liz
 doesn't,dogeki,contraction,Liz
-do,keɣbe,verb,Chris
 don't,kiloga,contraction,Liz
 earth,gub,noun,Ian
 EARTHWARD,paɣgul,adj,Ian
 EAT,tu,verb,Merri
 Elephant apple,pulobutid,noun,Izzy
-EMOTIONAL,babtaut,adj,Ian
 emotion,duataut,noun,natalie
+EMOTIONAL,babtaut,adj,Ian
 energy,tauk,noun,Chris
 enlighten,koa,verb,Merri
 enthalpy/order,ɖeub,noun,Chris
@@ -144,8 +148,8 @@ FAST,biukiuldog,adj,Ian
 feet,tepudo,noun,liz
 FEMININE,galkup,adj,Ian
 FEW,pap,adj,Ian
-fight,tikikila,verb,liz
 Fig,lobut,noun,Izzy
+fight,tikikila,verb,liz
 FINAL,ʈot,adj,Ian
 find,Kau,verb,merri
 finger,geukat,noun,Ian
@@ -154,28 +158,28 @@ Fish,fol,noun ,Izzy
 flag,tadulopaki,noun,liz
 font,gotapi,noun,liz
 FOOT,guɖ,noun,Ian
-force,gaukat,noun,Ian
 force,gau,verb,Merri
+force,gaukat,noun,Ian
 FOREIGN,bibkuppaɣgog,adj,Ian
 fresh,babput,adj,Ian
-from home,ʈiopoɣdab,adv,Chris
 from,ʈio,prep,Chris
+from home,ʈiopoɣdab,adv,Chris
 from where,ʈioɖugtak,adv,Chris
 fruit (in general),ditakopi,noun,Merri
 GIVE,ta,verb,Merri
+go ,pogo,verb,Liz
 Goat,got,noun,Izzy
 "God, ""the most valued one""",kuatepteapi,noun,
 Golden apple,pulobutigog,noun,Izzy
 good,bib,adj,Chris
 goodbye,tautpikdu,greeting,merri
-go ,pogo,verb,Liz
 grab,pi,verb,Ian
 grass,gotadipik,noun,liz
 GREEN,ɖiɣ,adj,Ian
 Guarana,lobut,noun,Izzy
 guava,boɣ,noun,liz
-Hairless Rambutan,libpaplobut,noun,Izzy
 hair,pap,noun,Izzy
+Hairless Rambutan,libpaplobut,noun,Izzy
 Hairy,papbiɖ,Adj,Merri
 HAND,pip,noun,Ian
 handsome,loki,adj,liz
@@ -184,9 +188,9 @@ hard,be,adj,Izzy
 harvest,tololo,verb,liz
 hat,hatedo,noun,liz
 HAVE,gu,verb,Ian
+HE,gel,pronoun,Unknown
 head,kilipib,noun,liz
 HEALTHY,bib,adj,Ian
-HE,gel,pronoun,Unknown
 hello,tautbiddu,greeting,merri
 help,Boup,verb,merri
 Hence,gabipoti,adverb,Liz
@@ -199,14 +203,14 @@ Horned melon,lokot,noun,Izzy
 hot,paep,adj,Chris
 house,pok,noun,Chris
 how,duopeuk,intr,Chris
-however,kumkuk,adv,Chris
 how,peuk,rel conj,Chris
+however,kumkuk,adv,Chris
 Huito,lobut,noun,Izzy
 HUNT,pi,verb,Merri
-idea,peak,noun,Chris
 I,dog,pronoun,Ian
-IF AND ONLY IF,toɣdag,conj,Chris
+idea,peak,noun,Chris
 IF,ɖaɖ,conj,Chris
+IF AND ONLY IF,toɣdag,conj,Chris
 ILLEGIBLE,babgal,adj,Ian
 in,debu,prep,Chris
 independent,duaʈiuk,adj,Chris
@@ -230,14 +234,14 @@ LENGTH,ɖab,noun,Ian
 lettuce,dabig,noun,Izzy
 lie,babkut,noun,Chris
 life,taudeb,noun,Chris
-light,ɖaebbiɖ,adj,Chris
 light,ɖaeb,noun,Chris
+light,ɖaebbiɖ,adj,Chris
 Like,tua,Verb,Merri
 limes,lubutoɖiɣ,noun,Izzy
 Listen ,dibupa,verb,Liz
 live,tau,verb,Chris
-logical,taulbiɖ,adj,Chris
 LOGIC,taut,noun,Chris
+logical,taulbiɖ,adj,Chris
 LONG-LASTING,kat,adj,Ian
 LOUD,babkiɭdad,adj,Ian
 make,keɣbe,verb,Chris
@@ -249,15 +253,15 @@ MEDICINAL,bibbib,adj,Ian
 medium,ki,adj,Izzy
 MelonPear,lobut,noun,Izzy
 member,geukat,noun,Ian
-",Merri
 milk,dakab,noun,Izzy
 mingle,,verb,merri
 minus,duabiɖ,verb,Chris
 mix,kop,verb,Izzy
 moist,bip,adj,Izzy
 molecules,dagueb,noun,Chris
-MONTH 10,libgokalal,time,natalie
+month,lala,noun,liz
 MONTH 1,libkolalal,time,natalie
+MONTH 10,libgokalal,time,natalie
 MONTH 2,libdakolal,time,natalie
 MONTH 3,takolal,time,natalie
 MONTH 4,pokalal,time,natalie
@@ -266,7 +270,6 @@ MONTH 6,kolalal,time,natalie
 MONTH 7,dakolal,time,natalie
 MONTH 8,libtakolal,time,natalie
 MONTH 9,libpokalal,time,natalie
-month,lala,noun,liz
 more,,adj,
 mouse,tabokali,noun,Liz
 MUCH,ɭab,adj,Ian
@@ -275,19 +278,19 @@ nap,ladotiki,verb,liz
 nature,,noun,
 Necessary,kuabibep,adj,Ian
 NOSE,gaug,noun,Ian
-not,ʈe,adv,Chris
 not,ki,adverb,Liz
+not,ʈe,adv,Chris
 nuts,pobutdid,noun,Izzy
 OBJECT,gub,noun,Ian
 old,kino,adj,liz
-onions,toda,noun,Izzy
 on,po,prep,Chris
+onions,toda,noun,Izzy
 optimal,bibtekat,adj,Chris
+or (exclusive),ɖieb,conj,Chris
+OR (inclusive),ʈiep,adv,Chris
 orange juice,ɣalobuteg,noun,Izzy
 oranges,lobuteg,noun,Izzy
-or (exclusive),ɖieb,conj,Chris
 organize,bibtekaldu,verb,Chris
-OR (inclusive),ʈiep,adv,Chris
 other,,adj,
 OUTWARD,paɣgol,adj,Ian
 oyster,katata,noun,liz
@@ -296,8 +299,8 @@ paper,pakitalopa,noun,liz
 part,gueb,noun,Chris
 Passion Fruit,lobut,noun,Izzy
 patatoes,goad,noun,Izzy
-peanut butter,daubtidgag,noun,Izzy
 peanut,daubtid,noun,Izzy
+peanut butter,daubtidgag,noun,Izzy
 people,gaopi,noun,Liz
 peppers,kaot,noun,Izzy
 phone,batapa,noun,liz
@@ -343,8 +346,8 @@ safety,,noun,
 Salt,pol,noun,Izzy
 salty,po,adj,Izzy
 same,tok,adj,Chris
-sandale,patube,noun,liz
 sand,gugog,noun,Ian
+sandale,patube,noun,liz
 Sapodilla, lobutod,noun,Izzy
 science,toɣdabu,noun,merri
 scratch,guta,verb,liz
@@ -375,6 +378,7 @@ smooth,dep,adj,Izzy
 soft,te,adj,Izzy
 sour,lu,adj,Izzy
 Speak,taupu,Verb,"Merri
+"
 SPEED,kiut,noun,Ian
 spicy,ka,adj,Izzy
 spike,ke,noun,Izzy
@@ -410,17 +414,17 @@ thus ,ɖaiɖ,adv,natalie
 tide pool,taudebʈuep,noun,Ian
 times (multiply,gudo,verb,Chris
 times/multiply,gud,verb,Chris
-toe,gulgeug,noun,Ian
-to home,tapoɣdab,adv,Chris
-tomatoes,tokot,noun,Izzy
 to,ta,prep,Chris
+to home,tapoɣdab,adv,Chris
+toe,gulgeug,noun,Ian
+tomatoes,tokot,noun,Izzy
 tree (from a),but,adj/noun,Izzy
 TRUE ,bibkulbiɖ,adj,Chris
 truth,bibkut,noun,Chris
 type,totalo,verb,liz
 UGLY,babgal,adj,Ian
-UNDERGROUND,kumgul,adj,Ian
 under,pui,prep,Chris
+UNDERGROUND,kumgul,adj,Ian
 UNDERSTAND,pa,verb,Merri
 unequal,duatoɣdag,adj,Chris
 universe,taeti,noun,Chris
@@ -455,8 +459,8 @@ where,keuʈ,rel conj,Chris
 WHITE,ʈap,adj,Ian
 who,deub,rel conj,Chris
 who,duodeub,intr,Chris
-why,ɖeub,rel conj,Chris
 why,duoɖeub,intr,Chris
+why,ɖeub,rel conj,Chris
 Wild boar,got,noun,Izzy
 WITHIN,paɣgulbiɖ,prep,Ian
 work,bibgau,verb,Ian
@@ -466,5 +470,5 @@ WORTHWHILE,bibpaɣgal,adj,Ian
 write,dogak,verb,liz
 yawn,likitabi,verb,liz
 YELLOW,gog,adj,Ian
-young,noki,adj,liz
 you,puip,,Merri
+young,noki,adj,liz

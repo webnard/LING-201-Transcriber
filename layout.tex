@@ -1,3 +1,5 @@
+% Code taken from Tobi on LaTeX Stack Exchange, licensed under cc by-sa 3.0
+% http://tex.stackexchange.com/a/30396
 \documentclass[%
     a5paper,
     fontsize=7.5pt,
@@ -36,7 +38,7 @@
 % \dict{<word>}{<gender>}{<text>}
 \newcommand{\dict}[3]{%
     \par\vspace{0.25\baselineskip}
-    \textbf{\textsf{#1}} \textit{#2} #3
+    \textbf{\textsf{#1}} \textit{#2} \textipa{#3}
 }
 
 % testing
