@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 # encoding: UTF-8
 
 require 'mini_magick'
@@ -31,17 +30,19 @@ module Transcriber
   # String containing all consonants
   CONSONANTS = (CONSONANT_MAP.keys + CONSONANT_MAP.values).uniq.join
 
-  # Pulls morphemes (based on the CVC rule) from the given string
   def morphemes str
+    ## 
+    # Pulls morphemes (based on the CVC rule) from the given string
     re = Regexp.new "([#{CONSONANTS}])?([#{VOWELS}]+)([#{CONSONANTS}])?"
     str.scan re
   end
 
-  # Creates a glyph for the given morpheme.
-  # If a canvas is specified, increases the width of the canvas as needed
-  # and paints the image onto it
-  # Returns an instance of Image
   def make_char_glyph morpheme, canvas = nil
+    ##
+    # Creates a glyph for the given morpheme.
+    # If a canvas is specified, increases the width of the canvas as needed
+    # and paints the image onto it
+    # Returns an instance of Image
     consonant = CONSONANT_MAP[morpheme[0]]
     vowels = morpheme[1].split('')
     consonant2 = CONSONANT_MAP[morpheme[2]]
@@ -88,12 +89,18 @@ module Transcriber
     end
     return image
   end
+
+  def transcribe word, output
+    ##
+    # Given a word, written in the IPA, writes to the specified output file
+    glyph = nil
+    morphemes(word).each{|morpheme|
+      glyph = make_char_glyph(morpheme, glyph)
+    }
+    glyph.write output
+  end
+  
+  module_function :transcribe
+  module_function :morphemes
+  module_function :make_char_glyph
 end
-
-#include Transcriber
-
-#glyph = nil
-#morphemes('duagudo').each{|morpheme|
-#  glyph = make_char_glyph(morpheme, glyph)
-#}
-#glyph.write 'examples/duagudo.png'

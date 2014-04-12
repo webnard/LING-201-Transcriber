@@ -11,13 +11,8 @@ USAGE
 To write the word _bibkuppaɣgog_ into an image file named `tmp2.png`
 
 ```ruby
-include Transcriber
-
-glyph = nil                                                                     
-morphemes('bibkuppaɣgog').each{|morpheme|                                       
-  glyph = make_char_glyph(morpheme, glyph)                                      
-}                                                                               
-glyph.write 'tmp2.png'
+require './transcriber'
+Transcriber.transcribe 'bibkuppaɣgog', 'tmp2.png'
 ```
 
 EXAMPLES
