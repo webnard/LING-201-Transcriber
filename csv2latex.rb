@@ -17,8 +17,8 @@ MAP = {
     'ɭ'=>'\:l'
 }
 
-text = File.read(input).gsub(/\\"/,'""')
-CSV.parse(text) do |data|
+#text = File.read(input).gsub(/\\"/,'""')
+CSV.foreach(input) do |data|
   word, transcription, speech = data
 
   if(word == nil || transcription == nil || speech == nil)
@@ -30,7 +30,7 @@ CSV.parse(text) do |data|
 
   if chapter != word[0] && word[0] >= 'a'
     chapter = word[0]
-    text += "\\chapter*{#{chapter.upcase}}\n"
+    #text += "\\chapter*{#{chapter.upcase}}\n"
   end
 
   ipa = ''
@@ -51,4 +51,4 @@ texout = File.read("layout.tex").sub("%REPLACE_ME%", text)
 
 File.write(texfile, texout)
 
-`pdflatex --interaction nonstopmode -halt-on-error -file-line-error #{texfile} #{output}`
+`pdflatex --jobname=#{output} --interaction nonstopmode -halt-on-error -file-line-error #{texfile}`
