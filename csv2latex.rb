@@ -53,16 +53,21 @@ CSV.foreach(input) do |data|
   end
   texfile = Dir.tmpdir + File::SEPARATOR + SecureRandom.hex + '.tex'
   
+  text += "\\begin{minipage}{\\textwidth}\n"
   text += "\\dict{#{word}}{#{speech}}{#{ipa}}\n"
 
   imgfile = 'tmp' + File::SEPARATOR + SecureRandom.hex + '.png'
   
   if Transcriber.transcribe(transcription, imgfile)
-    text += "\\begin{figure}[H]\n"
-    text += "\\includegraphics[width=0.5\\textwidth]{#{imgfile}}\n"
-    text += "\\end{figure}\n"
+    text += "\\\\*[0.4cm]\n"
+    text += "\\newline\n"
+    text += "\\begingroup\n"
+    text += "   \\centering\n"
+    text += "   \\includegraphics[height=0.7cm,width=\\linewidth,keepaspectratio]{#{imgfile}}\n"
+    text += "\\endgroup\n"
     images.push imgfile
   end
+  text += "\\end{minipage}\n"
 end
 
 texfile = Dir.tmpdir + File::SEPARATOR + SecureRandom.hex + '.tex'
