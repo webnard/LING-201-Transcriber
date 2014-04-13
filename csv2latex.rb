@@ -4,6 +4,7 @@
 require 'csv'
 require 'tmpdir'
 require 'securerandom'
+require './transcriber'
 
 input, output = ARGV
 
@@ -16,6 +17,8 @@ MAP = {
     'ʈ'=>'\:t',
     'ɭ'=>'\:l'
 }
+
+images = []
 
 #text = File.read(input).gsub(/\\"/,'""')
 CSV.foreach(input) do |data|
@@ -42,8 +45,18 @@ CSV.foreach(input) do |data|
       ipa += i
     end
   end
-
+  texfile = Dir.tmpdir + File::SEPARATOR + SecureRandom.hex + '.tex'
+  
   text += "\\dict{#{word}}{#{speech}}{#{ipa}}\n"
+
+  imgfile = 'tmp' + File::SEPARATOR + SecureRandom.hex + '.png'
+  
+  if Transcriber.transcribe(word, imgfile)
+    text += "\\begin{figure}[H]\n"
+    text += "\\includegraphics[width=0.5\\textwidth]{#{imgfile}}\n"
+    text += "\\end{figure}\n"
+    images.push imgfile
+  end
 end
 
 texfile = Dir.tmpdir + File::SEPARATOR + SecureRandom.hex + '.tex'
@@ -52,3 +65,7 @@ texout = File.read("layout.tex").sub("%REPLACE_ME%", text)
 File.write(texfile, texout)
 
 `pdflatex --jobname=#{output} --interaction nonstopmode -halt-on-error -file-line-error #{texfile}`
+
+images.each{|img|
+  File.delete img
+}
