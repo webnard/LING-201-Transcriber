@@ -11,6 +11,7 @@ module Transcriber
 
   # Maps a phoneme to its appropriate glyph
   CONSONANT_MAP = {
+    'm'=>'m',
     'p'=>'m',
     'b'=>'b',
     'g'=>'g',
@@ -93,6 +94,7 @@ module Transcriber
   def valid_word word
     word.each_char do |c|
       if CONSONANT_MAP[c] == nil && VOWELS.index(c) == nil
+        puts "Ain't no #{c}"
         return false
       end
     end
@@ -112,6 +114,11 @@ module Transcriber
     morphemes(word).each{|morpheme|
       glyph = make_char_glyph(morpheme, glyph)
     }
+
+    if glyph == nil
+      return false
+    end
+
     glyph.write output
     true
   end

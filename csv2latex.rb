@@ -29,7 +29,13 @@ CSV.foreach(input) do |data|
   end
 
   word.downcase!
+  word.strip!
+
+  transcription.downcase!
+  transcription.strip!
+
   speech.downcase!
+  speech.strip!
 
   if chapter != word[0] && word[0] >= 'a'
     chapter = word[0]
@@ -51,7 +57,7 @@ CSV.foreach(input) do |data|
 
   imgfile = 'tmp' + File::SEPARATOR + SecureRandom.hex + '.png'
   
-  if Transcriber.transcribe(word, imgfile)
+  if Transcriber.transcribe(transcription, imgfile)
     text += "\\begin{figure}[H]\n"
     text += "\\includegraphics[width=0.5\\textwidth]{#{imgfile}}\n"
     text += "\\end{figure}\n"
