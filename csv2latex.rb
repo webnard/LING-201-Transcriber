@@ -59,7 +59,6 @@ CSV.foreach(input) do |data|
   imgfile = 'tmp' + File::SEPARATOR + SecureRandom.hex + '.png'
   
   if Transcriber.transcribe(transcription, imgfile)
-    text += "\\\\*[0.4cm]\n"
     text += "\\newline\n"
     text += "\\begingroup\n"
     text += "   \\centering\n"
