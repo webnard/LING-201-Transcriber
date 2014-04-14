@@ -94,7 +94,7 @@ module Transcriber
   def valid_word word
     word.each_char do |c|
       if CONSONANT_MAP[c] == nil && VOWELS.index(c) == nil
-        puts "Ain't no #{c}"
+        puts "Found invalid phoneme: #{c}"
         return false
       end
     end

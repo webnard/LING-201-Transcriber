@@ -15,7 +15,8 @@ MAP = {
     'ɖ'=>'\:d',
     'ɣ'=>'G',
     'ʈ'=>'\:t',
-    'ɭ'=>'\:l'
+    'ɭ'=>'\:l',
+    'ʰ'=>'\super h'
 }
 
 images = []
@@ -56,15 +57,17 @@ CSV.foreach(input) do |data|
   text += "\\begin{minipage}{\\textwidth}\n"
   text += "\\dict{#{word}}{#{speech}}{#{ipa}}\n"
 
-  imgfile = 'tmp' + File::SEPARATOR + SecureRandom.hex + '.png'
+  imgfile = Dir.tmpdir + File::SEPARATOR + SecureRandom.hex + 'transcript.png'
   
-  if Transcriber.transcribe(transcription, imgfile)
+  if Transcriber.transcribe(transcription.gsub('ʰ',''), imgfile)
     text += "\\newline\n"
     text += "\\begingroup\n"
     text += "   \\centering\n"
     text += "   \\includegraphics[height=0.7cm,width=\\linewidth,keepaspectratio]{#{imgfile}}\n"
     text += "\\endgroup\n"
     images.push imgfile
+  else
+    puts "#{word} has an invalid phoneme in #{transcription}"
   end
   text += "\\end{minipage}\n"
 end
