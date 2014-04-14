@@ -1,0 +1,53 @@
+% Code taken from Tobi on LaTeX Stack Exchange, licensed under cc by-sa 3.0
+% http://tex.stackexchange.com/a/30396
+\documentclass[%
+    a5paper,
+    fontsize=6pt,
+]{scrbook}
+
+\usepackage[T1]{tipa}
+\usepackage[utf8]{inputenc}
+
+% narrow font
+\usepackage{times}
+\usepackage[scaled=0.85]{helvet}
+
+% layout
+\usepackage{geometry}
+\geometry{%
+    margin=1cm,
+    includehead,
+    includefoot
+}
+\usepackage{multicol}
+\setlength{\parindent}{0pt}
+\setlength{\columnseprule}{0.4pt}
+
+\usepackage{scrpage2}
+\usepackage{graphicx}
+
+\clearscrheadings
+\pagestyle{scrheadings}
+\setheadsepline{0.8pt}
+\setfootsepline{0.8pt}
+%\lehead{word}% first word on page
+%\rohead{word}% last word on page
+\ofoot{\pagemark}
+\setkomafont{pagehead}{\sffamily\bfseries}
+\setkomafont{pagination}{\sffamily}
+
+% entry command
+% \dict{<word>}{<gender>}{<text>}
+\newcommand{\dict}[3]{%
+    \par\vspace{0.25\baselineskip}
+    \textbf{\textsf{#1}} \textit{#2} \textipa{#3}
+}
+
+% testing
+\usepackage{pgffor}
+
+\begin{document}
+\begin{multicols}{3}
+%REPLACE_ME%
+\end{multicols}
+\end{document}

@@ -11,6 +11,7 @@ module Transcriber
 
   # Maps a phoneme to its appropriate glyph
   CONSONANT_MAP = {
+    'm'=>'m',
     'p'=>'m',
     'b'=>'b',
     'g'=>'g',
@@ -90,17 +91,40 @@ module Transcriber
     return image
   end
 
+  def valid_word word
+    word.each_char do |c|
+      if CONSONANT_MAP[c] == nil && VOWELS.index(c) == nil
+        puts "Found invalid phoneme: #{c}"
+        return false
+      end
+    end
+    true
+  end
+
   def transcribe word, output
     ##
     # Given a word, written in the IPA, writes to the specified output file
+    # return: boolean - whether or not it was successful
+
+    if not valid_word(word)
+      return false
+    end
+
     glyph = nil
     morphemes(word).each{|morpheme|
       glyph = make_char_glyph(morpheme, glyph)
     }
+
+    if glyph == nil
+      return false
+    end
+
     glyph.write output
+    true
   end
   
   module_function :transcribe
   module_function :morphemes
   module_function :make_char_glyph
+  module_function :valid_word
 end
